@@ -7,6 +7,7 @@ const ui = new UI()
 window.addEventListener('load', () => {
     navigator.geolocation.getCurrentPosition(successGeolocationCallback, errorGeolocationCallback)
     form.addEventListener('submit', getWeatherByCity)
+    setInterval(ui.refreshTime, 1000)
 })
 
 function successGeolocationCallback(position) {
