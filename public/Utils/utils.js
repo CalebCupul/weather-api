@@ -12,17 +12,17 @@ export function getWeatherIcon(weather, dateTime) {
 
     switch (weather) {
         case 'Thunderstorm':
-            return './icons/animated/thunder.svg'
+            return './public/icons/animated/thunder.svg'
         case 'Drizzle':
-            return './icons/animated/rainy-5.svg'
+            return '.public/icons/animated/rainy-5.svg'
         case 'Rain':
-            return './icons/animated/rainy-6.svg'
+            return '.public/icons/animated/rainy-6.svg'
         case 'Snow':
-            return './icons/animated/snowy-6.svg'
+            return '.public/icons/animated/snowy-6.svg'
         case 'Clear':
-            return isDay ? './icons/animated/day.svg' : './icons/animated/night.svg'
+            return isDay ? '.public/icons/animated/day.svg' : './public/icons/animated/night.svg'
         case 'Clouds':
-            return isDay ? './icons/animated/cloudy-day-3.svg' : './icons/animated/cloudy-night-3.svg'
+            return isDay ? '.public/icons/animated/cloudy-day-3.svg' : './public/icons/animated/cloudy-night-3.svg'
         default:
             break;
     }
