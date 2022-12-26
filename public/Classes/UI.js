@@ -1,4 +1,4 @@
-import { alertContent, outerDiv, cityInput, form, content, contentCityName, contentDataTime, contentIcon, contentTemperature, contentWeather, contentMinTemperature, contentWind, contentHumidity } from "../selectors.js"
+import { alertContent, outerDiv, cityInput, form, content, contentCityName, contentDataTime, contentIcon, contentTemperature, contentWeather, contentMinTemperature, contentWind, contentHumidity, timeDisplay } from "../selectors.js"
 import { dateTimeConversion, dateConversion, kelvinToCelsius, milesToKilometers, getWeatherIcon, timeConversion } from "../Utils/utils.js"
 class UI {
     loadCityWeather(name, list) {
@@ -86,8 +86,9 @@ class UI {
         alertContent.appendChild(message)
     }
 
+    refreshTime = () => timeDisplay.textContent = timeConversion(new Date())
+    
     cleanErrors() {
-
         while (alertContent.firstChild) {
             alertContent.removeChild(alertContent.firstChild)
         }
